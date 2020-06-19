@@ -1,0 +1,9 @@
+@import '../../sass/index';
+
+.appWrapper{
+  @media #{$mediaSmall} {
+    .pre-header{
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,17 @@
+@import '../../sass/flex';
+@import '../../sass/colors';
+
+.featuredImages{
+  @include flex-center-space-around;
+  &-image{
+    margin-top: 1.875rem;
+    height: 19.5rem;
+    background-color: $colorBackground;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    width: 100%;
+    max-width: 20rem;
+  }
+}

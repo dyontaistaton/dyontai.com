@@ -1,0 +1,97 @@
+@import '../index';
+
+$colorCardTitle: invert($color: $colorBackground);
+
+.card-link {
+	//@include flex-start-space-between;
+	//
+	// flex: 1;
+	// flex-direction: column;
+	background: $colorBackground;
+	display: block;
+	width: 100%;
+	border: 1px solid rgba($colorSelected, 0.2);
+
+	transition: $transitionDefault;
+
+	.arrow-points {
+		stroke: transparent;
+		transition: $transitionDefault;
+	}
+
+	&:hover,
+	&:focus {
+
+		@include background-box-shadow;
+
+		.card-title span {
+			border-color: $colorSubtitle;
+		}
+
+		.arrow-points {
+			stroke: $colorIcon;
+		}
+
+		.card-figure-image {
+			transform: scale(1.1) translateZ(0);
+			transition: 4s transform linear;
+			backface-visibility: hidden;
+		}
+
+	}
+}
+
+.card-figure {
+	@include flex-center-start;
+
+	align-items: stretch;
+	position: relative;
+	width: 100%;
+	height: 12.2rem;
+  overflow: hidden;
+  div{
+    width: 100%;
+  }
+}
+
+.card-figure-image {
+	@include backgrounds-cover;
+
+	flex: 1;
+	will-change: transform;
+	transition: 600ms transform linear;
+}
+
+.card-content {
+	//@include flex-start-start;
+
+	display: block;
+	flex: 1;
+	flex-direction: column;
+	text-align: left;
+	width: 100%;
+	border-top: none;
+	padding: 1.25rem 2.5rem;
+}
+
+.card-icon {
+	margin-bottom: .625rem;
+
+	g {
+		stroke: $colorSubtitle;
+	}
+}
+
+.card-title {
+	color: $colorTitle;
+  width: 100%;
+  letter-spacing: 4px;
+	span {
+		border-color: transparent;
+		transition: $transitionDefault;
+	}
+}
+
+.card-subtitle {
+	color: rgba($colorTitle, 0.6);
+}

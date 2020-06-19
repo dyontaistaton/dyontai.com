@@ -1,0 +1,21 @@
+@import '../../sass/index';
+
+.markdownContent{
+  &-inner{
+    padding: 0% 15%;
+  }
+  &-title{
+    text-align: left;
+    color: $colorTitle;
+    &::before{
+      content: '';
+      position: absolute;
+      height: 0.375rem;
+      width: 4rem;
+      background-color: $colorSubtitle;
+    }
+  }
+  &-content{
+
+  }
+}

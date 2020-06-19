@@ -1,0 +1,22 @@
+//Primary Colors
+$colorPrimary: #FC814A;
+
+//Secondary Colors
+$colorSecondary: #8AEA92;
+
+//White Colors
+$colorWhite: #E8EBF7;
+
+//Gray Colors
+$colorGray: #CFCCD6;
+
+//Black Colors
+$colorBlack:#0D0106;
+
+//Component Based
+$colorBackground: $colorBlack;
+$colorSelected: rgba(invert($colorBackground), 0.75);
+$colorSubtitle: $colorSecondary;
+$colorTitle: invert($colorBackground);
+$colorContent: $colorWhite;
+$colorIcon: $colorSecondary;

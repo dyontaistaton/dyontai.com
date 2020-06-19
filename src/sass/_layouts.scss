@@ -1,0 +1,41 @@
+@import '../sass/colors';
+
+@mixin layouts-center-el(){
+	top: 50%;
+	left: 50%;
+	transform: translate3d(-50%, -50%, 0);
+}
+
+@mixin layouts-center-el-horizontal(){
+	left: 50%;
+	transform: translate3d(-50%, 0, 0);
+}
+
+@mixin layouts-center-el-vertical(){
+	top: 50%;
+	transform: translate3d(0, -50%, 0);
+}
+
+@mixin layouts-centered-content(){
+	width: 100%;
+  max-width: 42.5rem;
+  text-align: center;
+}
+
+@mixin layouts-store-title-margin(){
+	margin: 110px 0 70px;
+}
+
+@mixin layouts-store-title-margin-responsive(){
+	margin: 60px 0 30px;
+}
+
+@mixin layouts-white-container-720(){
+	background: $colorBackground;
+	width: pxToRem(720);
+	max-width: 100%;
+	transform: translateY(- 2rem);
+	text-align: center;
+	margin: 5rem 0;
+	padding: 60px;
+}

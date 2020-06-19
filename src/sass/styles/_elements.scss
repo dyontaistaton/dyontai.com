@@ -1,0 +1,183 @@
+@import '../fonts';
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+	font-size: 100%;
+}
+
+body {
+	font-family: $fontPrimaryReg;
+	letter-spacing: 0.5px;
+	font-size: 16px;
+	line-height: 28px;
+	min-height: 100vh;
+	color: $colorBlack;
+
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-smoothing:antialiased;
+
+	-webkit-text-size-adjust:none;
+	box-sizing: border-box;
+}
+
+input:-webkit-autofill {
+	-webkit-box-shadow: 0 0 0px 1000px $colorBackground inset;
+}
+
+*::-webkit-media-controls-panel {
+	display: none!important;
+	-webkit-appearance: none;
+}
+
+*::--webkit-media-controls-play-button {
+	display: none!important;
+	-webkit-appearance: none;
+}
+
+*::-webkit-media-controls-start-playback-button {
+	display: none!important;
+	-webkit-appearance: none;
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+}
+
+::selection {
+	background: $colorSecondary;
+}
+::-moz-selection {
+	background: $colorSecondary;
+}
+
+[ng\:cloak],
+[ng-cloak],
+[data-ng-cloak],
+[x-ng-cloak],
+.ng-cloak,
+.x-ng-cloak,
+.ng-hide:not(.ng-hide-animate) {
+	display: none !important;
+}
+
+a {
+	text-decoration: none;
+	cursor: pointer;
+  color: $colorBlack;
+  &:hover{
+    text-decoration: none;
+    color: inherit;
+  }
+  @media #{$mediaLarge} {
+    font-size: 1.275rem !important;
+    letter-spacing: .275rem !important;
+  }
+}
+
+strike {
+	display: inline-block;
+}
+
+[ng-click],
+[data-ng-click],
+[x-ng-click] {
+	cursor: pointer;
+}
+
+figure {
+	margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: normal;
+}
+
+ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+button {
+  outline: none;
+  @media #{$mediaLarge} {
+    font-size: 1.475rem !important;
+  }
+}
+
+em {
+	font-style: italic;
+}
+
+img {
+	display: block;
+}
+
+strong {
+	font-family: $fontPrimaryBold;
+	font-weight: normal;
+}
+
+select::-ms-expand {
+	display: none;
+}
+
+.elements-main {
+	position: relative;
+	display: block;
+	padding: 0;
+  border-width: 1.875rem;
+  border: $colorBackground solid 1.875rem;
+  border-top: none;
+  border-bottom: none;
+	overflow: hidden;
+	z-index: 10;
+	background: $colorBackground;
+//	backface-visibility: hidden;
+	//
+	// &:after {
+	// 	content: '';
+	// 	position: fixed;
+	// 	left: 0;
+	// 	right: 0;
+	// 	bottom: 0;
+	// 	height: pxToRem(30);
+	// 	background: $colorBackground;
+	// 	z-index: 150;
+	// 	backface-visibility: hidden;
+	// 	transform: translateZ(0);
+	// }
+}
+
+.elements-image {
+	max-width: 78rem;
+	width: 100%;
+	height: auto;
+}
+
+// Responsive,
+@media #{$mediaSmall} {
+
+	.body {
+		overflow-y: scroll;
+		-webkit-overflow-scrolling: touch;
+}
+
+	.elements-main {
+		margin: 0;
+
+		&:after {
+			display: none;
+		}
+	}
+
+	.header-logo_container  {
+		min-width: 0;
+	}
+
+}

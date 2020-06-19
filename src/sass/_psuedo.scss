@@ -1,0 +1,27 @@
+@mixin pseudo-base(){
+	content: '';
+	position: absolute;
+	display: block;
+}
+
+@mixin pseudo-full(){
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}
+
+@mixin pseudo-color-dark(){
+	background-color: rgba(#000000, 0.3);
+}
+
+@mixin pseudo-under-gradient(){
+	bottom: - pxToRem(20);
+	left: pxToRem(30);
+	right: pxToRem(30);
+	height: pxToRem(20);
+	overflow: hidden;
+	background-image: linear-gradient(to top, rgba(0, 0, 0, 0.0), #888);
+	opacity: 0.3;
+	pointer-events: none;
+}
