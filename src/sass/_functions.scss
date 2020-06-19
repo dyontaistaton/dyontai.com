@@ -1,9 +1,0 @@
-@function pxToRem($px){
-  $remSize: $px / 16;
-  @return #{$remSize}rem;
-}
-
-@function remToPx($rem){
-  $pxSize: $rem * 16;
-  @return #{$pxSize}px;
-}

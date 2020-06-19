@@ -1,18 +1,46 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import App from './components/App';
+import App from './App';
 import * as serviceWorker from './serviceWorker';
-import 'bootstrap/dist/css/bootstrap.min.css';
 import 'normalize.css';
-import './sass/styles/_index.scss';
 
+import {Provider,useSelector} from 'react-redux';
+import {store} from './redux/index';
+import {config} from './config/firebase';
+import * as firebase from 'firebase/app';
 
+import {createFirestoreInstance} from "redux-firestore";
+import {ReactReduxFirebaseProvider,isLoaded} from "react-redux-firebase";
 
-const root=document.getElementById('root');
-ReactDOM.render(<App />, root);
+const rrfProps={
+  firebase,
+  config:{
+    ...config,
+    userProfile: "users",
+    useFirestoreForProfile: true,
+    attachAuthIsReady: true,
+  },
+  dispatch: store.dispatch,
+  createFirestoreInstance,
+  presence: 'presence', // where list of online users is stored in database
+  sessions: 'sessions',
+};
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
+function AwaitAuth({ children }) {
+  const auth = useSelector(state => state.firebase.auth)
+  if (!isLoaded(auth)) return (<Loading/>);
+  return children;
+};
+
+ReactDOM.render(
+  <Provider>
+    <ReactReduxFirebaseProvider {...rrfProps}>
+      <AwaitAuth>
+        <App/>
+      </AwaitAuth>
+    </ReactReduxFirebaseProvider>
+  </Provider>
+  ,document.getElementById('root')
+);
 serviceWorker.unregister();
