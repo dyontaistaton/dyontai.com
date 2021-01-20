@@ -5,7 +5,7 @@
   "license": "ISC",
   "dependencies": {
     "firebase": "^7.14.4",
-    "gsap": "^3.3.3",
+    "gsap": "^3.6.0",
     "markdown-to-jsx": "^6.11.4",
     "normalize.css": "^8.0.1",
     "polished": "^3.6.3",
