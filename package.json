@@ -1,5 +1,6 @@
 {
   "private": true,
+  "entry": ".output/server/index.mjs",
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
