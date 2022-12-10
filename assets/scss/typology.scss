@@ -1,0 +1,76 @@
+$heading-font: 'Roman', 'sans-serif';
+$heading-font-weight: 400;
+$heading-letter-spacing: -0.035em;
+
+$body-font: 'Zeyada', 'sans-serif';
+$body-font-weight: 400;
+
+$h1-font-size: 72px;
+$h2-font-size: 56px;
+$h3-font-size: 48px;
+$h4-font-size: 40px;
+$h5-font-size: 36px;
+$h6-font-size: 28px;
+
+$h1-line-height: 74px;
+$h2-line-height: 1.2;
+$h3-line-height: 1.2;
+$h4-line-height: 1.2;
+$h5-line-height: 1.2;
+$h6-line-height: 1.2;
+
+$base-font-size: 24px;
+$base-line-height: 39px;
+$base-letter-spacing: 0.02em;
+
+@mixin body-style() {
+	font-family: $body-font;
+	font-weight: $body-font-weight;
+	font-size: $base-font-size;
+	line-height: $base-line-height;
+    letter-spacing: $base-letter-spacing;
+}
+
+@mixin heading-style($font-size, $line-height) {
+	font-family: $heading-font;
+	font-weight: $heading-font-weight;
+	font-size: $font-size;
+	line-height: $line-height;
+    letter-spacing: $heading-letter-spacing;
+}
+
+h1,
+.h1 {
+	@include heading-style($h1-font-size, $h1-line-height);
+}
+
+h2,
+.h2 {
+	@include heading-style($h2-font-size, $h2-line-height);
+}
+
+h3,
+.h3 {
+	@include heading-style($h3-font-size, $h3-line-height);
+}
+
+h4,
+.h4 {
+	@include heading-style($h4-font-size, $h4-line-height);
+}
+
+h5,
+.h5 {
+	@include heading-style($h5-font-size, $h5-line-height);
+}
+
+h6,
+.h6 {
+	@include heading-style($h6-font-size, $h6-line-height);
+}
+
+p,
+.p,
+.text {
+	@include body-style();
+}

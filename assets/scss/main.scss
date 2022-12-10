@@ -1,0 +1,11 @@
+html{
+    height: 100vh;
+    overflow: hidden;
+}
+
+.visibility-hidden {
+    visibility: hidden;
+    display: block;
+    max-width: 0;
+    max-height: 0;
+}
