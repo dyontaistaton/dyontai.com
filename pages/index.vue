@@ -520,6 +520,10 @@ export default {
               @media screen and (max-width: 500px) {
                 height: 25vw;
               }
+
+              @media screen and (max-height: 600px) {
+                height: 21vw;
+              }
             }
           }
 
@@ -561,6 +565,10 @@ export default {
 
             @media screen and (max-width: 500px) {
               height: 25vw;
+            }
+
+            @media screen and (max-height: 600px) {
+              height: 21vw;
             }
           }
         }
