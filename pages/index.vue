@@ -242,6 +242,10 @@ export default {
           @media screen and (max-width: 500px) {
             margin-top: 35px;
           }
+
+          @media screen and (max-height: 800px) {
+            margin-top: 20px;
+          }
         }
 
         a {
@@ -350,6 +354,11 @@ export default {
         margin-bottom: 50px;
       }
 
+      @media screen and (max-height: 800px) {
+        margin-top: 50px;
+        margin-bottom: 40px;
+      }
+
       hgroup {
         @media screen and (max-width: 820px) {
           max-width: 390px;
@@ -409,6 +418,10 @@ export default {
         padding-left: 70px;
       }
 
+      @media screen and (max-height: 800px) {
+        margin-bottom: 35px;
+      }
+
       @media screen and (max-width: 600px) {
         left: -100px;
       }
@@ -461,6 +474,11 @@ export default {
         row-gap: 60px;
         flex-wrap: wrap;
 
+        @media screen and (max-height: 800px) {
+          margin-top: 30px;
+          row-gap: 20px;
+        }
+
         @media screen and (max-width: 1500px) {
           column-gap: 40px;
           row-gap: 30px;
@@ -485,9 +503,6 @@ export default {
           flex-shrink: 0;
           flex-grow: 1;
           width: fit-content;
-
-          @media screen and (max-width: 500px) {
-          }
 
           &:hover {
             .icon {
