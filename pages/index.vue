@@ -400,8 +400,7 @@ export default {
       background-color: $black;
       left: -150px;
       width: 100vw;
-      height: 100px;
-      max-height: 70px;
+      height: 70px;
       align-items: center;
       padding-left: 150px;
       margin-bottom: 100px;
@@ -428,6 +427,10 @@ export default {
 
       @media screen and (max-width: 600px) {
         left: -80px;
+      }
+
+      @media screen and (max-width: 500px) {
+        max-height: 55px;
       }
 
       .download-resume {
