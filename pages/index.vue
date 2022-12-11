@@ -243,7 +243,7 @@ export default {
             margin-top: 35px;
           }
 
-          @media screen and (max-height: 800px) {
+          @media screen and (max-height: 900px) {
             margin-top: 20px;
           }
         }
@@ -354,7 +354,7 @@ export default {
         margin-bottom: 50px;
       }
 
-      @media screen and (max-height: 800px) {
+      @media screen and (max-height: 900px) {
         margin-top: 50px;
         margin-bottom: 40px;
       }
@@ -418,7 +418,7 @@ export default {
         padding-left: 70px;
       }
 
-      @media screen and (max-height: 800px) {
+      @media screen and (max-height: 900px) {
         margin-bottom: 35px;
       }
 
@@ -474,7 +474,7 @@ export default {
         row-gap: 60px;
         flex-wrap: wrap;
 
-        @media screen and (max-height: 800px) {
+        @media screen and (max-height: 900px) {
           margin-top: 30px;
           row-gap: 20px;
         }
