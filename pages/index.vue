@@ -189,7 +189,9 @@ export default {
 @import "~/assets/scss/typology.scss";
 
 .page.home {
+  position: relative;
   height: 100vh;
+  max-height: 100vh;
   background-image: url("~/assets/img/BackgroundImage.jpg");
   background-size: cover;
   background-position: center;
@@ -212,7 +214,7 @@ export default {
     padding-right: 20px;
   }
   .sidebar {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     width: 70px;
