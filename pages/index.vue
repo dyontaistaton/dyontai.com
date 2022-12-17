@@ -396,6 +396,7 @@ export default {
     }
 
     .download-resume-bar {
+      flex-grow: 0;
       position: relative;
       background-color: $black;
       left: -150px;
